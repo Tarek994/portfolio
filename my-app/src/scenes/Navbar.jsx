@@ -18,7 +18,7 @@ const Link = ({page, selectedPage, setSelectedPage}) => {
 }
 
 const Navbar = ({selectedPage, setSelectedPage}) => {
-    const [isMenuToggled, setMenuToggled] = useState(false);
+    const [isMenuToggled, setisMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width:768px)") 
 
   return (
@@ -57,7 +57,7 @@ const Navbar = ({selectedPage, setSelectedPage}) => {
         ):(
         <button 
         className="rounded-full bg-red p-2"
-        onClick={() => setMenuToggled(!isMenuToggled)}
+        onClick={() => setisMenuToggled(!isMenuToggled)}
         >
             <img alt="menu-icon" src="../assets/menu-icon.svg"/>
         </button>
