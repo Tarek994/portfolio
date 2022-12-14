@@ -2,6 +2,7 @@ import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 
+
 const Link = ({page, selectedPage, setSelectedPage}) => {
     const lowerCasePage = page.toLowerCase();
 
@@ -62,6 +63,14 @@ const Navbar = ({selectedPage, setSelectedPage}) => {
             <img alt="menu-icon" src="../assets/menu-icon.svg"/>
         </button>
         )}
+
+      {/* MOBILE MENU POPUP */}
+      {!isAboveSmallScreens && !isMenuToggled &&(
+        <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]"></div>
+
+      )}
+        
+      
         </div>
     </nav>
   )
