@@ -61,9 +61,42 @@ const Landing = ({setSelectedPage}) => {
                 corporis, fuga illo? Molestias, officia!
             </p>
           </motion.div>
-        </div>
-      
 
+          {/* CALL TO ACTIONS */}
+          <motion.div
+          className="flex mt:-5 justify-center md:justify-start "
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once:true, amount: 0.5}}
+          transition={{ delay:0.2, duration: 0.5 }}
+          variants={{
+            hidden:{opacity: 0, x: -50},
+            visible:{opacity: 1, x: 0}
+          }}
+          >
+            <AnchorLink
+            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
+            hover:bg-blue hover:text-white transition duration-500"
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
+            >
+              Contact Me
+            </AnchorLink>
+
+            <AnchorLink
+            classID="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5 "
+            onClick={() => setSelectedPage("contact")}
+            href="#contact"
+            >
+              <div
+                className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair"
+              >
+                Let's Talk.
+              </div>
+            </AnchorLink>
+
+          </motion.div>
+        </div>
     </section>
   )
 }
