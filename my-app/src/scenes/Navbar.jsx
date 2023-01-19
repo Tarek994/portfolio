@@ -2,6 +2,7 @@ import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import menu_icon from "../assets/menu_icon.svg"
+import close_icon from "../assets/close_icon.svg"
 
 const Link = ({page, selectedPage, setSelectedPage}) => {
     const lowerCasePage = page.toLowerCase();
@@ -27,7 +28,9 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage}) => {
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
         <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-playfair text-3xl font-bold">TG</h4>
+        
         {/* DESkTOP NAV */}
+        
         {isAboveSmallScreens? (
             <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
                 <Link 
@@ -66,12 +69,16 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage}) => {
         )}
 
       {/* MOBILE MENU POPUP */}
+      
       {!isAboveSmallScreens && !isMenuToggled &&(
         <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+          
           {/* CLOSE ICON */}
+          
           <div className="flex justify-end p-12">
-            <button onClick={()=> setisMenuToggled(!isMenuToggled)}>
-            <img alt="close-icon" src="../assets/close-icon.svg"/>
+            <button  
+            onClick={()=> setisMenuToggled(!isMenuToggled)}>
+            <img alt="close_icon" src={close_icon}/>
             </button>
           </div>
 
