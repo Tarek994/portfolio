@@ -1,11 +1,10 @@
 import LineGradient from "../components/LineGradient";
-import {motion} from "framer-motion";
-
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
     <section id="testimonials" className="pt-32 pb-16">
-        {/* HEADING */}
+      {/* HEADING */}
       <motion.div
         className="md:w-1/3 text-center md:text-left"
         initial="hidden"
@@ -27,7 +26,7 @@ const Testimonials = () => {
         </p>
       </motion.div>
 
-        {/* TESTIMONIALS */}
+      {/* TESTIMONIALS */}
       <div className="md:flex md:justify-between gap-8">
         <motion.div
           className="mx-auto relative bg-blue max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
@@ -46,7 +45,7 @@ const Testimonials = () => {
             A auctor pharetra hendrerit mattis amet etiam interdum platea.
           </p>
         </motion.div>
-        
+
         <motion.div
           className="mx-auto relative bg-red max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
             before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person2"
@@ -69,11 +68,11 @@ const Testimonials = () => {
         <motion.div
           className="mx-auto relative bg-yellow max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
             before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            variants={{
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          variants={{
             hidden: { opacity: 0, scale: 0.8 },
             visible: { opacity: 1, scale: 1 },
           }}
@@ -83,12 +82,9 @@ const Testimonials = () => {
             Fames odio in at. At magna ornare dictum lectus.
           </p>
         </motion.div>
-
-
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;
