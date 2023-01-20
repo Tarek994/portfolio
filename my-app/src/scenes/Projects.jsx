@@ -1,6 +1,6 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
-
+import project_1 from "../assets/project-1.jpeg"
 const container = {
     hidden: {},
     visible: {
