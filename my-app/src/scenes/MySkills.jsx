@@ -1,12 +1,12 @@
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {motion} from "framer-motion";
-
+import skills_image from "../assets/skills-image.png"
 
 
 
 const MySkills = () => {
-    const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="skills" className="pt-10 pb-24">
       {/* HEADER AND IMAGE SECTION */}
@@ -32,7 +32,7 @@ const MySkills = () => {
           </p>
         </motion.div>
         <div className="mt-16 md:mt-0">
-          {isAboveLarge ? (
+          {isAboveMediumScreens ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
               before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
@@ -40,11 +40,11 @@ const MySkills = () => {
               <img
                 alt="skills"
                 className="z-10"
-                src="assets/skills-image.png"
+                src={skills_image}
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src="assets/skills-image.png" />
+            <img alt="skills" className="z-10" src={skills_image} />
           )}
         </div>
 
