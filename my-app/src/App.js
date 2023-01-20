@@ -3,11 +3,12 @@ import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
+import Testimonials from "./scenes/Testimonials";
 
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
 import LineGradient from "./components/LineGradient";
-
+import {motion} from "framer-motion"
 
 
 function App() {
@@ -48,6 +49,16 @@ function App() {
       <div className="w-5/6 mx-auto md:h-full">
           <Projects/>
       </div>
+      <LineGradient/>
+      <div className="w-5/6 mx-auto md:h-full">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("testimonials")}
+        >
+          <Testimonials />
+        </motion.div>
+    </div>
     </div>
     
   );
