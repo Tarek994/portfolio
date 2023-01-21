@@ -1,6 +1,8 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import project_1 from "../assets/project-1.jpeg"
+
+
 const container = {
     hidden: {},
     visible: {
@@ -19,6 +21,7 @@ const container = {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
       bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
     const projectTitle = title.split(" ").join("-").toLowerCase();
+    console.log(projectTitle);
   
     return (
       <motion.div variants={projectVariant} className="relative">
@@ -29,7 +32,7 @@ const container = {
             porttitor accumsan tincidunt.
           </p>
         </div>
-        <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+        <img src={"src/assets/project-1.jpeg"} alt={projectTitle} />
       </motion.div>
     );
   };
