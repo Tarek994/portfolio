@@ -5,10 +5,12 @@ import MySkills from "./scenes/MySkills";
 import LineGradient from "./components/LineGradient";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
 import { useEffect, useState } from "react";
 import Testimonials from "./scenes/Testimonials";
 import { motion } from "framer-motion";
+
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -88,6 +90,7 @@ function App() {
         >
           <Contact />
         </motion.div>
+          <Footer/>
       </div>
       
     </div>
