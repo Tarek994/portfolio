@@ -15,3 +15,12 @@ export const projectImages = {
     "project-6": project_6,
     "project-7": project_7,
 }
+
+export const projectDescriptions = {
+    "project-1": "ipsum dolor sit amet consectetur adipisicing",
+    "project-2": "Lorem  elit. ",
+    "project-3": "Commodi vero iure harum tempora",
+    "project-4": "quos architecto voluptatem ducimus totam odit",
+    "project-5": ", veritatis, quo consequuntur consequatur",
+
+}
