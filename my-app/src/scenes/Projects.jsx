@@ -1,7 +1,7 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
-
-
+import {projectDescriptions} from "../assets/images";
+import {projectNames} from "../assets/images";
 import { projectImages } from "../assets/images";
 
 
@@ -30,10 +30,9 @@ const Project = ({ title }) => {
     return (
       <motion.div variants={projectVariant} className="relative">
         <div className={overlayStyles}>
-          <p className="text-2xl font-playfair">{title}</p>
+          <p className="text-2xl font-playfair">{projectNames[title]}</p>
           <p className="mt-7">
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-            porttitor accumsan tincidunt.
+          {projectDescriptions[projectTitle]}
           </p>
         </div>
         <img src={projectImages[projectTitle]} alt={projectTitle} />
