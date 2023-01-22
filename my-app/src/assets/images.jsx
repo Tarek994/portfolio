@@ -24,3 +24,14 @@ export const projectDescriptions = {
     "project-5": ", veritatis, quo consequuntur consequatur",
 
 }
+
+export const projectNames = {
+    "Project 1": "Admin Dashboard",
+    "Project 2": "Best Portfolio",
+    "Project 3": "Social Blog",
+    "Project 4": "Apple",
+    "Project 5": "Acer website",
+    "Project 6": "Sound library",
+    "Project 7": "Best Portfolio",
+    
+  }
